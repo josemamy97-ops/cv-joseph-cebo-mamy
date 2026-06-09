@@ -4,14 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Parcours | Joseph Cebo Mamy</title>
-    <!-- Point d'entrée Vite (Bootstrap, Sass et JS locaux) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script type="module" src="/js/main.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-
 <body class="text-light min-vh-100 position-relative pb-5">
 
-    <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark sticky-top shadow-lg">
         <div class="container-fluid">
             <a class="navbar-brand fw-bold" href="index.html">
@@ -21,53 +18,56 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="experience.html">Parcours</a></li>
-                    <li class="nav-item"><a class="nav-link" href="skills.html">Compétences</a></li>
+                <ul class="navbar-nav ms-auto align-items-center text-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html" data-i18n="nav_home">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="experience.html" data-i18n="nav_parcours">Parcours</a></li>
+                    <li class="nav-item"><a class="nav-link" href="skills.html" data-i18n="nav_competences">Compétences</a></li>
+                    <li class="nav-item ms-3 d-flex gap-1">
+                        <button class="btn btn-sm btn-outline-warning py-0 px-2" data-lang="fr">FR</button>
+                        <button class="btn btn-sm btn-outline-warning py-0 px-2" data-lang="de">DE</button>
+                        <button class="btn btn-sm btn-outline-warning py-0 px-2" data-lang="en">EN</button>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
 
     <main class="container py-5">
-        <h1 class="display-5 fw-bold mb-5 text-center gradient-text">
-            Mon <span class="text-warning">Parcours</span>
-        </h1>
+        <h1 class="display-5 fw-bold mb-5 text-center gradient-text" data-i18n="page_parcours">Mon Parcours</h1>
 
         <div class="row g-4">
 
-            <!-- Section Expérience Professionnelle -->
             <div class="col-md-6">
                 <section class="card glass-card h-100 p-4 rounded-4 shadow border-0">
                     <h2 class="h4 text-warning fw-bold mb-4 border-bottom pb-2">
-                        <i class="fas fa-briefcase me-2"></i>Expérience
+                        <i class="fas fa-briefcase me-2"></i>
+                        <span data-i18n="section_experience">Expérience</span>
                     </h2>
                     <div class="mb-4">
-                        <h3 class="h5 mb-1 text-white fw-semibold">System- und Netzwerkadministrator</h3>
-                        <p class="text-warning mb-1">Orange Guinée (Conakry)</p>
-                        <span class="text-muted small">09/2021 - 09/2022</span>
+                        <h3 class="h5 mb-1 text-white fw-semibold" data-i18n="job_titre">System- und Netzwerkadministrator</h3>
+                        <p class="text-warning mb-1" data-i18n="job_entreprise">Orange Guinée (Conakry)</p>
+                        <span class="text-muted small" data-i18n="job_date">09/2021 - 09/2022</span>
                         <ul class="text-white small mt-3">
-                            <li>Installation et configuration de système de communication.</li>
-                            <li>Optimiser la couverture et les performances réseau.</li>
-                            <li>La maintenance des infrastructures télécom.</li>
-                            <li>Tester la qualité des transmissions de données.</li>
+                            <li data-i18n="job_tache1">Installation et configuration de système de communication.</li>
+                            <li data-i18n="job_tache2">Optimiser la couverture et les performances réseau.</li>
+                            <li data-i18n="job_tache3">Maintenance des infrastructures télécom.</li>
+                            <li data-i18n="job_tache4">Tester la qualité des transmissions de données.</li>
                         </ul>
                     </div>
                 </section>
             </div>
 
-            <!-- Section Formation -->
             <div class="col-md-6">
                 <section class="card glass-card h-100 p-4 rounded-4 shadow border-0">
                     <h2 class="h4 text-warning fw-bold mb-4 border-bottom pb-2">
-                        <i class="fas fa-graduation-cap me-2"></i>Formation
+                        <i class="fas fa-graduation-cap me-2"></i>
+                        <span data-i18n="section_formation">Formation</span>
                     </h2>
                     <div>
-                        <h3 class="h5 mb-1 text-white fw-semibold">Bachelor en Electronique</h3>
-                        <p class="text-warning mb-1">Université Gamal Abdel Nasser</p>
-                        <span class="text-muted small">Diplômé en 2021 (Guinée)</span>
-                        <p class="text-white small mt-3">Spécialisation en réseau Telecom, système de communication.</p>
+                        <h3 class="h5 mb-1 text-white fw-semibold" data-i18n="diplome">Bachelor en Electronique</h3>
+                        <p class="text-warning mb-1" data-i18n="universite">Université Gamal Abdel Nasser</p>
+                        <span class="text-muted small" data-i18n="diplome_date">Diplômé en 2021 (Guinée)</span>
+                        <p class="text-white small mt-3" data-i18n="diplome_desc">Spécialisation en réseau Telecom, système de communication.</p>
                     </div>
                 </section>
             </div>
@@ -75,9 +75,8 @@
         </div>
     </main>
 
-    
     <footer class="position-absolute bottom-0 start-0 w-100 py-4 text-center text-muted small">
-        <p class="mb-0">Joseph Cebo Mamy - Mon cv</p>
+        <p class="mb-0" data-i18n="footer">Joseph Cebo Mamy - Mon CV</p>
     </footer>
 
 </body>
