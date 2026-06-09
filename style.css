@@ -1,0 +1,57 @@
+/* UNIQUEMENT ce que Bootstrap ne peut pas faire.
+
+/* ── 1. FOND GLOBAL ── */
+body {
+    background: radial-gradient(circle at top right, #1e293b, #020617);
+    background-attachment: fixed;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* ── 2. PHOTO DE PROFIL ── */
+.profile-img {
+    width: 180px;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 50% / 35%; /* Forme ovale — impossible en Bootstrap */
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2) !important;
+}
+
+/* ── 3. GLASSMORPHISM (cartes) ── */
+.glass-card {
+    background: rgba(30, 41, 59, 0.5) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-color: rgba(255, 255, 255, 0.1) !important;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* ── 4. NAVBAR ── */
+.navbar {
+    background: rgba(15, 23, 42, 0.85) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+/* ── 5. DÉGRADÉ TEXTE ── */
+.gradient-text {
+    background: linear-gradient(to right, #ffffff, #f59e0b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* ── 6. RESPONSIVE MOBILE ── */
+@media (max-width: 768px) {
+    .glass-card {
+        backdrop-filter: blur(4px);
+        -webkit-backdrop-filter: blur(4px);
+    }
+    .profile-img {
+        width: 130px;
+        height: 175px;
+    }
+    .navbar {
+        background: #0f172a !important;
+        backdrop-filter: none;
+    }
+}
